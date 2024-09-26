@@ -1,0 +1,24 @@
+---
+title: "My Analysis"
+format: html
+editor: source
+embed-resources: true 
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+
+glimpse(storms)
+
+storms |>
+  ggplot() +
+  geom_point(mapping = aes(x = pressure, 
+                           y = wind, 
+                           color = category)) +
+  labs(title = "Storms Data Viz")
+
+```
+
